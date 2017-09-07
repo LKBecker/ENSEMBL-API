@@ -47,7 +47,9 @@ For each item in `input get sequence.txt` (one ENSEMBL ID per line), retrieves s
 #### `batch_SNP_r2_retrieval(species, population)`
 ##### Parameters:
   `species`: The species in which to search for r2 values. Default: human
+  
   `population`: The population from which to retrieve r2 values. Default: 1000GENOMES:phase_3:GBR (for a full list of available populations, see [ENSEMBL's REST documentation](https://rest.ensembl.org/documentation/info/variation_populations)
+
 
 Constructs an r2 value matrix for two lines of SNPs from `input rsquared retrieval.txt`. That is, line 1 creates columns and line 2 creates rows of a matrix, with the values being r2 between these SNPs.
 
