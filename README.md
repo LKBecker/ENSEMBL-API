@@ -1,9 +1,11 @@
 # ENSEMBL-API
 Quick Python script for rate-limited access to ENSEMBLs databases, supporting a multitude of REST calls (See also: rest.ensembl.org).
 Based on the original script [here](https://github.com/Ensembl/ensembl-rest/wiki/Example-Python-Client)
+
 Tested on Python 3.2.3
 
-All functions are executed on the contents of text files in the same directory as ENSEMBL_API.py. Generally, the expected input format is one item per line with tab-separated values. Output follows the same convention and should be easy to import into Excel or R.
+All functions are executed on the contents of text files in the same directory as ENSEMBL_API.py. 
+General input format is one item per line with tab-separated values. Output follows the same convention and should be easy to import into Excel or R.
 
 ### Available functions:
 #### `batch_SNPs(species)`
@@ -45,7 +47,8 @@ For each item in `input get sequence.txt` (one ENSEMBL ID per line), retrieves s
 #### `batch_SNP_r2_retrieval(species, population)`
 ##### Parameters:
   `species`: The species in which to search for r2 values. Default: human
-  `population`: The population from which to retrieve r2 values. Default: 1000GENOMES:phase_3:GBR (for a full list of available populations, see [ENSEMBL's REST documentation] (a selector is in the works)(https://rest.ensembl.org/documentation/info/variation_populations)
+  `population`: The population from which to retrieve r2 values. Default: 1000GENOMES:phase_3:GBR (for a full list of available populations, see [ENSEMBL's REST documentation](https://rest.ensembl.org/documentation/info/variation_populations)
+
 Constructs an r2 value matrix for two lines of SNPs from `input rsquared retrieval.txt`. That is, line 1 creates columns and line 2 creates rows of a matrix, with the values being r2 between these SNPs.
 
 **Experimental function, still slow and partially redundant in case of rows == columns**
